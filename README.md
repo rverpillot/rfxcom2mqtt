@@ -155,8 +155,5 @@ docker-compose build
 build multi Arch image
 
 ```
-docker buildx build \ 
---platform linux/amd64,linux/arm/v7 \
---push \
--t rfxcom2mqtt/rfxcom2mqtt .
+docker buildx build --platform linux/amd64,linux/arm64/v8 --push -t rverpillot/rfxcom2mqtt .
 ```

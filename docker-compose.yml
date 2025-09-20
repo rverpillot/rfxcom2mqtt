@@ -2,7 +2,7 @@ version: "3.3"
 
 services: 
   rfxcom2mqtt:
-    image: rfxcom2mqtt/rfxcom2mqtt
+    image: rverpillot/rfxcom2mqtt
     container_name: rfxcom2mqtt
     build: ./
     volumes:

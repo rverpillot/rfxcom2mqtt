@@ -234,6 +234,11 @@ export default class Controller implements MqttEventListener {
     // Define default topic entity
     let topicEntity = deviceId;
 
+    // check if evt.batteryLevel is defined and convert to percentage
+    if (evt.batteryLevel !== undefined && typeof evt.batteryLevel === "number") {
+      evt.batteryLevel *= 10;
+    }
+
     const json = JSON.stringify(evt, null, 2);
     const payload = JSON.parse(json);
 
