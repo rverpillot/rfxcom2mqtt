@@ -236,7 +236,7 @@ export default class Controller implements MqttEventListener {
 
     // check if evt.batteryLevel is defined and convert to percentage
     if (evt.batteryLevel !== undefined && typeof evt.batteryLevel === "number") {
-      evt.batteryLevel *= 10;
+      evt.batteryLevel = (evt.batteryLevel +1) * 10;
     }
 
     const json = JSON.stringify(evt, null, 2);

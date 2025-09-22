@@ -149,7 +149,7 @@ ts-node .\src\index.ts
 Build a local image
 
 ```
-docker-compose build
+docker compose build
 ```
 
 build multi Arch image
